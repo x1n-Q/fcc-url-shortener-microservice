@@ -9,6 +9,7 @@ const urlDatabase = new Map();
 let nextId = 1;
 
 app.use(cors({ optionsSuccessStatus: 200 }));
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
