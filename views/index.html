@@ -1,40 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>URL Shortener Microservice</title>
-    <link rel="stylesheet" href="/style.css" />
+    <title>URL Shortener Microservice | freeCodeCamp.org</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png"
+    />
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
   </head>
+
   <body>
-    <main class="page">
-      <section class="card">
-        <p class="label">freeCodeCamp API Project</p>
-        <h1>URL Shortener Microservice</h1>
-        <p class="intro">
-          Submit a valid HTTP or HTTPS URL and receive a short numeric ID you
-          can use for redirects.
-        </p>
-
-        <form action="/api/shorturl" method="post" class="form">
-          <label for="url_input">Short URL creation</label>
-          <input
-            id="url_input"
-            name="url"
-            type="text"
-            placeholder="https://www.example.com"
-            required
-          />
-          <button type="submit">POST URL</button>
+    <h1>URL Shortener Microservice</h1>
+    <main>
+      <section>
+        <form action="/api/shorturl" method="POST">
+          <fieldset>
+            <legend>URL Shortener</legend>
+            <label for="url_input">URL:</label>
+            <input id="url_input" type="text" name="url" placeholder="https://www.freecodecamp.org/" />
+            <input type="submit" value="POST URL" />
+          </fieldset>
         </form>
-
-        <h2>Example POST</h2>
-        <pre>[project_url]/api/shorturl - body (urlencoded)
-url=https://www.freecodecamp.org</pre>
-
-        <h2>Example Response</h2>
-        <pre>{ "original_url": "https://www.freecodecamp.org", "short_url": 1 }</pre>
       </section>
     </main>
+    <footer>
+      <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp</a></p>
+    </footer>
   </body>
 </html>
